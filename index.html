@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList Tracker</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>ToDo List Tracker</h2>
+        </div>
+
+        <div class="dashboard">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                data-whatever="@mdo">Add a task</button>
+
+            <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Task Dialog Box</h5>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Task Title:</label>
+                                    <input type="text" class="form-control" id="task-title">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Description:</label>
+                                    <textarea class="form-control" id="task-desc"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button id="sbmt" type="button" class="btn btn-primary"
+                                data-bs-dismiss="modal">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="task-container" id="list-item">
+                <div class="first">
+                    
+                    <ul id="todo-task" class="bucket todo" draggable="true">
+                        <!-- <h3>ToDo List</h3> -->
+                    </ul>
+                </div>
+                <div class="second">
+                    <!-- <h3>Task in Progress</h3> -->
+                    <ul id="progress-task" class="bucket inProgress" draggable="true">
+                    </ul>
+                </div>
+                <div class="third">
+                    <!-- <h3>Done</h3> -->
+                    <ul class="bucket complete" id="drop-list-item">
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <h5>TODOLIST</h5>
+        </div>
+    </div>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js "></script> -->
+    <script src="./libraries/jquery-3.6.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/dialog.js"></script>
+    <script src="./js/dragdrop.js"></script>
+
+</body>
+
+</html>
